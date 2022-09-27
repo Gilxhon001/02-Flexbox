@@ -1,40 +1,123 @@
-/* Style the sidebar - fixed full height */
+/* REMOVING DEFAULT CSS STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ----------------------------- */
+
+/* ----------------- Style the sidebar ---------------*/
 .sidebar {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(236, 236, 236, 0.349);
-    overflow-x: hidden;
-    padding-top: 16px;
-    display: flexbox;
-  }
-  
-  /* Style sidebar links */
-  .sidebar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #2b2b2b;
-    display: block;
-  }
-  
-  /* Style links on mouse-over */
-  .sidebar a:hover {
-    color: #2b2bb2;
-    transition: all 0.3s ease-out;
-  }
-  
-  /* Style the main content */
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
-  }
-  
-  /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------------------------------------------------- */
+
+
+/* ----------------- Style sidebar logo --------------- */
+.sidebar_logo {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.sidebar_logo .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background: url(assets/Develhope.png);
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-out;
+  display: flex;
+}
+
+.sidebar .logo:hover {
+  border-radius: 0;
+  transform: scale(0.9);
+}
+
+/* ---------------------------------------------------- */
+
+
+/* ------------------ Style Menu ----------------------- */
+.sidebar_list {
+  display: flex;
+  flex: 2;
+  list-style: none;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+
+.sidebar_list li {
+  margin: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar_list li:hover {
+  transform: scale(1.2);
+}
+
+.sidebar_list a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #2b2b2b;
+}
+
+.sidebar_list a:hover {
+  color: #2b2bb2;
+}
+
+/* ----------------------------------------------------- */
+
+
+/* ------------- Style sidebar avatar ------------------ */
+.sidebar_avatar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+
+}
+
+.sidebar_avatar .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 60px;
+  border-style: solid;
+  border-color: #2b2b2b;
+  background: url(assets/user.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.sidebar_avatar p {
+  font-size: 20px;
+  color: #2b2b2b;
+  padding: 10px;
+}
+
+.sidebar_avatar:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------------------------------------------- */
